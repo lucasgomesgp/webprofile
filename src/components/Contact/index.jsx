@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export function Contact(){
     return(
-       <section className="contact">
+       <section id="contact">
             <h2 id="contact-title">Contact</h2>
             <div className="contact-icons">
                 <div className="icon-contact">

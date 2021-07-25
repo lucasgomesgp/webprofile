@@ -17,7 +17,7 @@ export function Navbar(){
                         </a>
                     </li>
                     <li id="logoArea"> 
-                        <a href="#logo">
+                        <a href="#home">
                             <img src={logoImg} alt="Logo" />
                         </a>
                     </li>

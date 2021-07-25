@@ -16,7 +16,7 @@ export function Home(){
                 <Navbar />
             </header>
             <main>
-                <section className="profile-area">
+                <section  id="home">
                     <div className="texts">
                         <div className="name">
                             <h2>Lucas</h2>
@@ -43,7 +43,7 @@ export function Home(){
                     </svg>
                 </div>
                 <Skills />
-                <section className="projects">
+                <section id="projects">
                     <h2>Projects</h2>
                     <div className="project">
                         <div className="proj">
@@ -51,30 +51,30 @@ export function Home(){
                                 <a href="https://github.com/lucasgomesgp/myalbum" target="_blank" rel="noreferrer">
                                     <h4 className="text-center">MyAlbum</h4>
                                     <img src={myAlbumImg} alt="My Album" className="imgBg"/>
-                                    <p>Control and creation of posts and sending personal photos, working as a diary, adapting to each user</p>
+                                    <p>Controle e criação de posts e envio de fotos, funcionando como um diário pessoal, adaptado a cada usuário.</p>
                                 </a>
                             </h3>
                         </div>
                         <div className="proj">
                             <h3>
                                     <a href="https://github.com/lucasgomesgp/navbar" target="_blank" rel="noreferrer">
-                                        <h4 className="text-center">Animated Navbar</h4>
+                                        <h4 className="text-center">Navbar Animada</h4>
                                         <img src={navbarImg} alt="Navbar" id="navbarImg"/>
-                                        <p>Animated Navbar created to be used in future web projects</p>
+                                        <p>Navbar animada, criada para ser utilizada em futuros projetos web.</p>
                                     </a>
                             </h3>
                         </div>
                     </div>
                 </section>
                 <Contact />
-                <footer>
-                    <p>
-                        Developed with by
-                            <span><img src={heartImg} alt="Heart icon" /></span> 
-                        Lucas Gomes
-                    </p>
-                </footer>
             </main>
+            <footer>
+                <p>
+                    Desenvolvido com
+                    <span><img src={heartImg} alt="Heart icon" /></span> 
+                    Lucas Gomes
+                </p>
+            </footer>
         </>
     );
 }

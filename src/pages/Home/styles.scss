@@ -1,9 +1,7 @@
 @import "../../styles/short";
 
 main {
-    height: 80vh;
-    position: relative;
-    .profile-area {
+    #home {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -74,9 +72,9 @@ main {
         }
     }
 }
-.projects{
+#projects{
     color: #FFFFFF;
-    margin-top: 200px;
+    margin-top: 500px;
     h2{
         @include title-area;
         margin-top: 50px;
@@ -89,10 +87,17 @@ main {
         text-align: center;
         gap: 100px;
         .proj{
+            display: flex;
             h3{
                 a{
                     color: #FFFFFF;
                     text-decoration: none;
+                    .text-center{
+                        font-size: 24px;
+                    }
+                    img{
+                        margin-top: 20px;
+                    }
                     .imgBg{
                         width: 600px;
                         height: 400px;
@@ -101,8 +106,9 @@ main {
                         height: 400px;
                     }
                     p{
-                        width: 400px;
+                        width: 600px;
                         text-align: justify;
+                        font-weight: 400;
                     }
                 }
             }
@@ -112,7 +118,6 @@ main {
    
 }
 footer{
-    position: absolute;
     margin-top: 100px;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
