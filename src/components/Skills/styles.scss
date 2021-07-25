@@ -1,0 +1,36 @@
+@import "../../styles/short";
+
+.skills{
+    margin-top:300px;
+    width: 100%;
+    h2{
+        @include title-config;
+    }
+    #title-skill{
+       @include after-area;
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        gap: 200px;
+        position: relative;
+        z-index: 1;
+        .text-icon{
+            position: relative;
+            img{
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+    .bg-skills{
+        position: absolute;
+        z-index: -1;
+        top: 600px;
+        #bg-icons{
+            width: 100%;
+        }
+    }
+}

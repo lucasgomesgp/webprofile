@@ -1,5 +1,12 @@
 import { Navbar } from "../../components/Navbar";
-import notebookImg from "../../assets/icons/Notebook.svg";
+import { Skills } from "../../components/Skills";
+import { Contact } from "../../components/Contact";
+
+import profileImg from "../../assets/foto_perfil.jpeg";
+import heartImg from "../../assets/icons/heart.svg";
+import myAlbumImg from "../../assets/Login.png";
+import navbarImg from "../../assets/Navbar.png";
+
 import "./styles.scss";
 
 export function Home(){
@@ -20,11 +27,12 @@ export function Home(){
                             <h3 className="text-front">Developer</h3>
                         </div>
                     </div>
-                    <div className="notebook-area">
-                        <img src={notebookImg} alt="Notebook" />
+                    <div className="bg-profile">
+                        <a href="https://github.com/lucasgomesgp" target="_blank" rel="noreferrer">
+                            <img src={profileImg} alt="Profile" />
+                        </a>
                     </div>
                 </section>
-            </main>
                 <div className="waves">
                     <svg width="1440" height="173" viewBox="0 0 1440 173" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g class="waves">
@@ -34,6 +42,39 @@ export function Home(){
                         </g>
                     </svg>
                 </div>
+                <Skills />
+                <section className="projects">
+                    <h2>Projects</h2>
+                    <div className="project">
+                        <div className="proj">
+                            <h3>
+                                <a href="https://github.com/lucasgomesgp/myalbum" target="_blank" rel="noreferrer">
+                                    <h4 className="text-center">MyAlbum</h4>
+                                    <img src={myAlbumImg} alt="My Album" className="imgBg"/>
+                                    <p>Control and creation of posts and sending personal photos, working as a diary, adapting to each user</p>
+                                </a>
+                            </h3>
+                        </div>
+                        <div className="proj">
+                            <h3>
+                                    <a href="https://github.com/lucasgomesgp/navbar" target="_blank" rel="noreferrer">
+                                        <h4 className="text-center">Animated Navbar</h4>
+                                        <img src={navbarImg} alt="Navbar" id="navbarImg"/>
+                                        <p>Animated Navbar created to be used in future web projects</p>
+                                    </a>
+                            </h3>
+                        </div>
+                    </div>
+                </section>
+                <Contact />
+                <footer>
+                    <p>
+                        Developed with by
+                            <span><img src={heartImg} alt="Heart icon" /></span> 
+                        Lucas Gomes
+                    </p>
+                </footer>
+            </main>
         </>
     );
 }
