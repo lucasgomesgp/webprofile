@@ -9,7 +9,7 @@ export function Skills(){
         <>
             <section id="skills">
                 <h2 id="title-skill">Skills</h2>
-                <div className="icons">
+                <div className="icons" id="iconsMove">
                     <div className="text-icon">
                         <img src={htmlImg} alt="HTML5" />
                         <h2 className="skills-text">HTML</h2>

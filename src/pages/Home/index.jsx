@@ -10,6 +10,7 @@ import navbarImg from "../../assets/Navbar.png";
 import "./styles.scss";
 
 export function Home(){
+    
     return(
         <>
             <header>

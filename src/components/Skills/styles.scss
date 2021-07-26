@@ -16,12 +16,10 @@
         align-items: center;
         margin-top: 100px;
         gap: 100px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: -500px;
+        transform: translateX(-200px);
         z-index: 1;
         opacity: 0;
+        animation: moveIcons 2s ease forwards;
         .text-icon{
             display: flex;
             flex-direction: column;
@@ -82,6 +80,9 @@
     }
 }
 
-.moveIcons{
-    left: 0;
+@keyframes moveIcons{
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
