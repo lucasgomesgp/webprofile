@@ -6,6 +6,7 @@ import profileImg from "../../assets/foto_perfil.jpeg";
 import heartImg from "../../assets/icons/heart.svg";
 import myAlbumImg from "../../assets/Login.png";
 import navbarImg from "../../assets/Navbar.png";
+import flashImg from "../../assets/home_flash.png";
 
 import "./styles.scss";
 
@@ -52,7 +53,10 @@ export function Home(){
                                 <a href="https://github.com/lucasgomesgp/myalbum" target="_blank" rel="noreferrer">
                                     <h4 className="text-center">MyAlbum</h4>
                                     <img src={myAlbumImg} alt="My Album" className="imgBg"/>
-                                    <p>Controle e criação de posts e envio de fotos, funcionando como um diário pessoal, adaptado a cada usuário.</p>
+                                    <p>
+                                        Controle e criação de posts e envio de fotos, 
+                                        funcionando como um diário pessoal, adaptado a cada usuário.
+                                    </p>
                                 </a>
                             </h3>
                         </div>
@@ -65,6 +69,18 @@ export function Home(){
                                     </a>
                             </h3>
                         </div>
+                        <div className="proj">
+                            <h3>
+                                    <a href="https://github.com/lucasgomesgp/series4you" target="_blank" rel="noreferrer">
+                                        <h4 className="text-center">Series4you</h4>
+                                        <img src={flashImg} alt="Series4you" className="imgBg"/>
+                                        <p>
+                                            Site com a lista das séries que mais assisto, 
+                                            funcionado como um organizador, feito com NextJS.
+                                        </p>
+                                    </a>
+                            </h3>
+                        </div>
                     </div>
                 </section>
                 <Contact />
@@ -73,7 +89,7 @@ export function Home(){
                 <p>
                     Desenvolvido com
                     <span><img src={heartImg} alt="Heart icon" /></span> 
-                    Lucas Gomes
+                    by Lucas Gomes
                 </p>
             </footer>
         </>
