@@ -1,0 +1,29 @@
+.project {
+    margin-top: 10rem;
+    .projects {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 4rem;  
+
+        .project__item {
+            a{
+                img{
+                    width: 20rem;
+                    height: 12rem;
+                    transition: transform 400ms ease-in-out;
+                    &:hover{
+                        transform: scale(1.08);
+                        // transform: rotateY(180deg);
+                    }
+
+                }
+                p{
+                    width: 15rem;
+                    text-align: justify;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,46 +1,35 @@
-#contact {
-    margin-top: 100px;
-    #contact-title {
-        color: #ffffff;
-        font-size: 36px;
-        text-align: center;
-        position: relative;
-        font-weight: 500;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 45%;
-            height: 4px;
-            width: 10%;
-            background-color: #3958ad;
-        }
-    }
-    .contact-icons {
+.contact {
+    margin-top: 2rem;
+    &__icons {
         display: flex;
-        gap: 45px;
         justify-content: center;
-        margin-top: 50px;
-        .icon-contact {
-                a {
-                background-color: #000000;
-                width: 200px;
-                height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 10px;
-                margin-top: 10px;
-                &:hover{
-                    filter: brightness(1.2);
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        @include breakpoint-max(medium) {
+            gap: 1rem;
+        }
+
+        .icon__contact {
+            background-color: $dark;
+            padding: 2rem;
+            border-radius: 2rem;
+            transition: filter 200ms ease-in-out;
+
+            img {
+                width: 7rem;
+                height: 7rem;
+                @include breakpoint-max(medium) {
+                    width: 4rem;
+                    height: 4rem;
                 }
             }
-        }
 
-        img {
-            width: 140px;
-            height: 140px;
+            &:hover{
+                filter: brightness(0.2);
+            }
         }
     }
 }

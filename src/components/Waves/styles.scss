@@ -1,0 +1,36 @@
+.waves__container{
+    svg{
+        width: 100%;
+        .wrapper{
+            .wave{
+                &__3{
+                    animation: wave3 4s ease-in-out infinite alternate;
+                    
+                }
+                &__2{
+                    animation: wave2 4s ease-in-out 2s infinite alternate;
+                }
+                &__1{
+                    animation: wave1 4s ease-in-out 4s infinite alternate;
+                }
+            }
+        }
+    }
+    
+}
+
+@keyframes wave3{
+    100%{
+        transform: translateX(-20%);
+    }
+}
+@keyframes wave2{
+    100%{
+        transform: translateX(-120px); 
+    }
+}
+@keyframes wave1{
+    100%{
+        transform: translateX(14%); 
+    }
+}

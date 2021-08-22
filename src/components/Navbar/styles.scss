@@ -1,51 +1,88 @@
-navbar {
-    ul {
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
-        align-items: center;
-        
-        
-        li {
+@import "../../styles/variables";
+
+.menu {
+    position: relative;
+
+    &__items {
+        position: relative;
+        @include breakpoint-min(medium) {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &:not(:nth-child(3)){
             
-            margin: 0px 10px;
-            a{  
-                img{
-                    animation: animatedLogo 1s ease 0.4s 2 alternate;
-                }
+        }
+        .logo {
+            @include breakpoint-max(medium) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
-            .menu-item {
-                padding: 10px 40px;
-                font-size: 22px;
-                color: #ffffff;
-                text-decoration: none;
-                position: relative;
+            &__img {
+            }
 
-                &::before{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0%;
-                    border: 2px solid #3958AD;
-                    opacity: 0;
-                    transition: .8s ease;
+            .hamburguer {
+                background-color: $white;
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 10%;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+                @include breakpoint-min(medium) {
+                    display: none;
                 }
-                &:hover{
-                    &::before{
-                        width: 100%;
-                        opacity: 1;
-                    }
+        
+                &__item {
+                    height: 0.18rem;
+                    width: 84%;
+                    background-color: $dark;
+                    align-items: center;
+                    margin-top: 0.2rem;
                 }
-
             }
         }
         
     }
-}
 
-@keyframes animatedLogo{
-    to{
-        transform: rotate3d(360, 360, 360, 360deg);
+    &__li{
+        cursor: pointer;
+
+        @include breakpoint-max(medium) {
+            display: none;
+        }
     }
+    
+    &__link {
+        padding: 1.2rem ;
+        text-decoration: none;
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: 500;
+        position: relative;
+        
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 0.2rem;
+            width: 0%;
+            background-color: $blueDown;
+            opacity: 0;
+            transition: width 300ms ease-in-out;
+        }
+        
+        &:hover::after{
+            opacity: 1;
+            width: 100%;
+        }
+       
+    }
+
 }
